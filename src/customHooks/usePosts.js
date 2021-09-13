@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useMemo } from "react";
 //ТАК БЫЛО РАНЬШЕ:
 //хук useMemo нужен для кэширования чтобы постоянно не производить сортировку
 //колбек отработает только после изменения одного из параметров массива во втором аргументе
@@ -18,8 +18,10 @@ import React, { useState, useMemo } from "react";
 
 export const useSortedPosts = (posts, sort) => {
   const sortedPosts = useMemo(() => {
-    if (sort) {
+    if (sort === "title" || sort === "body") {
       return [...posts].sort((a, b) => a[sort].localeCompare(b[sort]));
+    } else if (sort === "id") {
+      return [...posts].sort((prev, next) => prev.id - next.id);
     }
     return posts;
   }, [sort, posts]);

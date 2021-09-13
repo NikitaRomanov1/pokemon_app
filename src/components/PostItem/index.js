@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MyButton from "../../UI/MyButton";
 import { PostContent } from "../../styles/styles";
+import { useHistory } from "react-router";
 
 const PostItem = ({ post, number, removePost }) => {
-  const handleRemove = () => {
+  const handleRemove = (e) => {
+    e.stopPropagation();
     removePost(post);
   };
-
+  const router = useHistory();
   return (
-    <PostContent>
+    <PostContent onClick={() => router.push(`/posts/${post.id}`)}>
       <div>
         <strong>
           {post.id}. {post.title}
@@ -16,7 +18,7 @@ const PostItem = ({ post, number, removePost }) => {
         <div>{post.body}</div>
       </div>
       <div style={{ marginLeft: "auto", marginTop: 5 }}>
-        <MyButton onClick={handleRemove}>Удалить</MyButton>
+        <MyButton onClick={(e) => handleRemove(e)}>Удалить</MyButton>
       </div>
     </PostContent>
   );
