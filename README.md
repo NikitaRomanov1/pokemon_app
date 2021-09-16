@@ -1,6 +1,7 @@
 # Pokemon App
 
-This project is under development now.
+This project is under development now, so API is just JSONPlaceholder.
+
 
 
 
