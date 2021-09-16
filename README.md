@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Pokemon App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is under development now, so API is just JSONPlaceholder.
+
+
+
 
 ## Available Scripts
 
