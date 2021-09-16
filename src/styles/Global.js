@@ -4,9 +4,9 @@ const Global = createGlobalStyle`
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-
+  box-sizing: border-box; 
 }
+ 
 ${
   "" /* #root {
   display: flex;
@@ -19,6 +19,6 @@ ${
 
 export default Global;
 
-// ::-webkit-scrollbar {
-//     width: 0;
+//  ::-webkit-scrollbar {
+//      width: 0;
 //   }

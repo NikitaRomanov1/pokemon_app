@@ -15,7 +15,7 @@ export const PostContent = styled(motion.div)`
   min-height: 200px;
 `;
 
-export const ButtonStyle = styled.button.attrs((props) => ({
+export const ButtonStyle = styled(motion.button).attrs((props) => ({
   className: props.className,
 }))`
   color: ${theme.colors.green};
@@ -67,28 +67,47 @@ export const SelectStyle = styled.select`
   }
 `;
 
-export const ModalContentStyle = styled.div`
-  padding: 25px;
+export const ModalContentStyle = styled(motion.div)`
+  width: clamp(15%, 600px, 90%);
+  height: min(50%, 200px);
+
+  margin: auto;
   background: white;
+  padding: 25px;
   border-radius: 16px;
-  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const ModalStyle = styled.div.attrs((props) => ({
-  className: props.className,
-}))`
-  &.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+// export const ModalStyle = styled(motion.div).attrs((props) => ({
+//   className: props.className,
+// }))`
+//   &.active {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   display: none;
+//   background: rgba(0, 0, 0, 0.5);
+// `;
+export const BackdropStyle = styled(motion.div)`
   position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
   right: 0;
-  left: 0;
-  display: none;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const LoaderStyle = styled(motion.div)`
@@ -106,14 +125,13 @@ export const PageWrapperStyle = styled(motion.div)`
 
 export const NavbarStyle = styled.nav`
   height: 50px;
-  width: 100vw;
   display: flex;
   align-items: center;
   padding: 0 15px;
   background: ${theme.colors.red};
   z-index: 100;
   position: sticky;
-  margin: 0;
+  top: 0;
 `;
 
 export const GridStyle = styled.div`
