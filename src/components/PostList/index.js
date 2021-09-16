@@ -33,7 +33,7 @@ const PostList = ({ posts, title, removePost }) => {
             textAlign: "center",
           }}
         >
-          Записей нет
+          No posts
         </h2>
       ) : (
         <GridStyle>

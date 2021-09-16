@@ -22,19 +22,19 @@ export const PostForm = ({ createPost }) => {
     <form>
       <MyInput
         type="text"
-        placeholder="Название"
+        placeholder="Title"
         value={post.title}
         onChange={(e) => setPost({ ...post, title: e.target.value })}
       />
       <MyInput
         type="text"
-        placeholder="Описание"
+        placeholder="Description"
         value={post.body}
         onChange={(e) => setPost({ ...post, body: e.target.value })}
       />
 
       <MyButton style={{ marginTop: 15 }} type="submit" onClick={addNewPost}>
-        Создать
+        Create
       </MyButton>
     </form>
   );

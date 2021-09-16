@@ -21,11 +21,11 @@ const Login = () => {
         flexDirection: "column",
       }}
     >
-      <h1>Страница для логина</h1>
+      <h1>Login</h1>
       <form onSubmit={login}>
-        <MyInput type="text" placeholder="Введите логин" />
-        <MyInput type="password" placeholder="Введите пароль" />
-        <MyButton>Войти</MyButton>
+        <MyInput type="text" placeholder="just push the button" />
+        <MyInput type="password" placeholder="just push the button" />
+        <MyButton>Log in</MyButton>
       </form>
     </div>
   );

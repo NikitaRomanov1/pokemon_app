@@ -13,6 +13,7 @@ export const PostContent = styled(motion.div)`
   justify-content: space-between;
   border-radius: 10px;
   min-height: 200px;
+  cursor: pointer;
 `;
 
 export const ButtonStyle = styled(motion.button).attrs((props) => ({

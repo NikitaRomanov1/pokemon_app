@@ -29,7 +29,7 @@ const PostIdPage = () => {
         <MyLoader />
       ) : (
         <div>
-          <h1>Вы открыли страницу поста c ID = {params.id}</h1>
+          <h1>It's a page with post ID = {params.id}</h1>
           {comments.map((comm, index) => (
             <div style={{ marginTop: 15 }} key={index}>
               <h5>{comm.email}</h5>

@@ -14,11 +14,11 @@ const MyNavbar = () => {
   return (
     <NavbarStyle>
       <MyButton light onClick={logout}>
-        Выйти
+        Exit
       </MyButton>
       <div style={{ marginLeft: "auto" }}>
-        <Link to="/about">О сайте</Link>
-        <Link to="/">Посты</Link>
+        <Link to="/about">About</Link>
+        <Link to="/">Posts</Link>
       </div>
     </NavbarStyle>
   );

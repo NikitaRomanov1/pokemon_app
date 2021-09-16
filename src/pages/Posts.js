@@ -83,7 +83,7 @@ const Posts = () => {
           style={{ marginTop: 30, width: "40%" }}
           onClick={() => (modalOpen ? close() : open())}
         >
-          Создать пользователя
+          Create post
         </MyButton>
 
         <AnimatePresence
@@ -98,17 +98,17 @@ const Posts = () => {
         <PostFilter filter={filter} setFilter={setFilter} />
         <MySelect
           value={limit}
-          defaultValue="Кол-во элементов на странице"
+          defaultValue="Number of posts on the page"
           onChange={(value) => setLimit(value)}
           options={[
             { value: 5, name: "5" },
             { value: 10, name: "10" },
             { value: 25, name: "25" },
-            { value: 100, name: "Показать всё" },
+            { value: 100, name: "Show all" },
           ]}
         />
       </div>
-      {error && <h1>Произошла ошибка ${error}</h1>}
+      {error && <h1>Error ${error}</h1>}
       {isPostLoading ? (
         <div
           style={{
@@ -125,7 +125,7 @@ const Posts = () => {
           <PostList
             removePost={removePost}
             posts={sortedAndFilteredPosts}
-            title="Список постов"
+            title="Post List"
           />
         </div>
       )}

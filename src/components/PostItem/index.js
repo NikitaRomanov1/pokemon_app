@@ -18,7 +18,7 @@ const PostItem = ({ post, number, removePost }) => {
         <div>{post.body}</div>
       </div>
       <div style={{ marginLeft: "auto", marginTop: 5 }}>
-        <MyButton onClick={(e) => handleRemove(e)}>Удалить</MyButton>
+        <MyButton onClick={(e) => handleRemove(e)}>Delete</MyButton>
       </div>
     </PostContent>
   );
