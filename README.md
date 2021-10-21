@@ -1,4 +1,4 @@
-# Pokemon App
+# Post_list_App
 
 This project is under development now, so API is just JSONPlaceholder.
 
