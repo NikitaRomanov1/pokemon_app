@@ -39,7 +39,6 @@ const Posts = () => {
       setTotalPages(getPageCount(totalCount, limit));
     }
   );
-
   //Для динамической пагинации раскомментировать это
   // useObserver(lastElement, page < totalPages, isPostLoading, () => {
   //   setPage(page + 1);
